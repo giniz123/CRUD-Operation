@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+}
+
+body > div {
+  display: flex;
+  gap: 40px;
+}
+
+#main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-btn {
+  width: 50px;
+}
+
+.right {
+  width: 400px;
+}
+.right > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right > div > p {
+  flex-grow: 1;
+}
+
+.right > div > span {
+  display: flex;
+  gap: 25px;
+}
+.right > div i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
