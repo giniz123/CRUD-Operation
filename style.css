@@ -14,6 +14,10 @@ body > div {
   gap: 1rem;
 }
 
+.msg {
+  color: red;
+}
+
 .post-btn {
   width: 50px;
 }
@@ -21,21 +25,22 @@ body > div {
 .right {
   width: 400px;
 }
-.right > div {
+#posts {
+  display: flex;
+  flex-direction: column;
+}
+
+#posts > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.right > div > p {
-  flex-grow: 1;
-}
-
-.right > div > span {
+#posts > div > span {
   display: flex;
   gap: 25px;
 }
-.right > div i:hover {
+#posts > div i:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all 0.3s;
