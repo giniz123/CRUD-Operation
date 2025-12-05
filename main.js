@@ -35,8 +35,21 @@ const displayPosts = () => {
   <div>
             <p>${postInput.IndividualPost}</p>
             <span class="icons"
-              ><i class="fa-solid fa-pen-to-square"></i
-              ><i class="fa-solid fa-trash-can"></i
+              ><i onClick="editPost(this)" class="fa-solid fa-pen-to-square"></i
+              ><i onClick="deletePost(this)"   class="fa-solid fa-trash-can"></i
             ></span>
  </div>`;
+  textArea.value = "";
+};
+
+const deletePost = (e) => {
+  let postNum = e.parentNode;
+  let removePost = postNum.parentNode.remove();
+  console.log(removePost);
+};
+
+const editPost = (e) => {
+  const editablePost = e.parentNode.previousElementSibling.innerText;
+  textArea.value = editablePost;
+  e.parentNode.parentNode.remove();
 };
